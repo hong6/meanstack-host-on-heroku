@@ -1,63 +1,114 @@
 
 https://devcenter.heroku.com/articles/quickstart
+
 For windows add to system path ;C:\Program Files (x86)\Git\bin\
 
 step1: download zip file to c:\Git_test\mean-stack\
+
 step2: cd\Git_test\mean-stack\ and >npm install
+
 step3: npm install -g bower
+
 step4: install files for bower >bower insatll
+
 step5: use gitbash, $git init, git add ., git commit -m "init"
+
 step6: go https://devcenter.heroku.com/articles/quickstart, signup and signin, download and install Heroku Toolbelt for windows, then click my app tab.
+
 step7: back to cmd line $heroku create, will have http://stark-springs-4613.herokuapp.com/ | git@heroku.com:stark-springs-4613.git
 
+
 /* -- not this 2 keys for heroku --
+
 C:/Users/xliu/.ssh/github_rsa
+
 C:/Users/xliu/.ssh/github_rsa.pub
+
 --------------------------------- */
 
+
 step8: $git push heroku master --error!!!
+
 fix:
+
 https://devcenter.heroku.com/articles/keys
+
 $ ssh-keygen -t rsa
+
 herokukey
 password
+
+
 after generated new keys in the J:\.ssh\id_rsa and J:\.ssh\id_rsa.pub, then copy both files to C:\Users\xliu\.ssh\
+
 Then added the new keys
+
 $heroku keys:add
+
 How to list keys
+
 $heroku keys
 
+
+
 then push to Heroku success steps!
+
 $git init
+
 $git add .
+
 $git commit -m "init"
+
 $heroku git:remote -a stark-springs-4613
+
+
 fixed key stuff
+
 $ssh-keygen -t rsa
+
 copy to C:\Users\xliu\.ssh\
+
 $heroku keys:add
+
 $git push heroku master
 
+
 $git remote -v
+
 heroku git@heroku.com:stark-springs-4613.git(fetch)
+
 heroku git@heroku.com:stark-springs-4613.git(push)
 
+
 step9: add-on papertrail
+
 Choose you app by click, then run production check, then Choklad, choose your app from dropdown, then click Add button for free.
 
 step10: add-on MongoHQ, and create DB, copy your DB creditial to congig file.
 
+
 Note: need credit card information for the add-ons
 
+
 push to github as a backup
+
 $git init
+
 $git add .
+
 $git commit -m "v1"
+
 ($git remote show origin)
+
 go to github create repo named meanstack-host-on-heroku, https://github.com/hong6/meanstack-host-on-heroku.git
+
 $git remote add origin https://github.com/hong6/meanstack-host-on-heroku.git
+
 $git push origin master
+
 ($git push github master)
+
+
 
 
 
