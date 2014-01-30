@@ -38,6 +38,10 @@ copy to C:\Users\xliu\.ssh\
 $heroku keys:add
 $git push heroku master
 
+$git remote -v
+heroku git@heroku.com:stark-springs-4613.git(fetch)
+heroku git@heroku.com:stark-springs-4613.git(push)
+
 step9: add-on papertrail
 Choose you app by click, then run production check, then Choklad, choose your app from dropdown, then click Add button for free.
 
@@ -46,12 +50,10 @@ step10: add-on MongoHQ, and create DB, copy your DB creditial to congig file.
 Note: need credit card information for the add-ons
 
 push to github as a backup
+$git init
 $git add .
-$git commit -m "init"
-$git remote show origin
-$git remote -v
-heroku git@heroku.com:stark-springs-4613.git(fetch)
-heroku git@heroku.com:stark-springs-4613.git(push)
+$git commit -m "v1"
+($git remote show origin)
 go to github create repo named meanstack-host-on-heroku, https://github.com/hong6/meanstack-host-on-heroku.git
 $git remote add origin https://github.com/hong6/meanstack-host-on-heroku.git
 $git push origin master
